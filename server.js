@@ -150,9 +150,6 @@ var SampleApp = function() {
 
 
 
-/**
- *  main():  Main code.
- */
 var zapp = new SampleApp();
 zapp.initialize();
 zapp.start();
