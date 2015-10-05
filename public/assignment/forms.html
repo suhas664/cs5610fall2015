@@ -1,1 +1,136 @@
 <!-- Forms page -->
+<!-- Bootstrap example page has been refered to and edited -->
+<!-- Reference source = http://getbootstrap.com/examples/dashboard/ -->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="Forms page for the assignment">
+    	<meta name="author" content="Suhas Venkatesha Murthy">
+
+		<title>Forms</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link href = "css/style.css" rel = "stylesheet">
+		
+	</head>
+	<body>
+		<!-- Should have 2 tabs : Forms and Fields -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		    <div class="container-fluid">
+		        <div class="navbar-header">
+		          	<a class="navbar-brand" href="home.html">Form Maker</a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          	<ul class="nav navbar-nav navbar-right">
+		              	<li><a href="register.html">Register</a></li>
+		              	<li><a href="login.html">Login</a></li> 
+		          	</ul>
+		        </div>
+		    </div>
+		</nav>
+
+		<div class="container-fluid">
+      		<div class="row">
+        		<div class="col-sm-3 col-md-2 sidebar">
+          			<ul class="nav nav-sidebar">
+              			<li><a href="home.html"> Home <span class="sr-only">(current)</span></a></li>
+              			<li><a href="profile.html">Profile</a></li>
+              			<li><a href="admin.html">Admin</a></li>
+              			<li class="active"><a href="forms.html">Forms</a></li>
+          			</ul>
+        		</div>
+
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<h1 class="page-header">Forms</h1>
+					<ul class="nav nav-tabs">
+						<li class="active" role="presentation"><a href="#">Forms</a></li>
+						<li role="presentation"><a href="form-fields.html">Fields</a></li>
+					</ul>
+
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<th>
+									<span class="glyphicon glyphicon-sort"></span>
+									Form Name
+								</th>
+								<th>Action</th>
+								<tr>
+									<td>
+										<input type="text" name="Name" placeholder="Name" class="form-control">
+									</td>
+									<td class="no-wrap">
+										<a href="#" >
+											<span class="glyphicon glyphicon-plus"></span>
+										</a>
+										<a href="#" >
+											<span class="glyphicon glyphicon-ok"></span>
+										</a>
+									</td>
+								</tr>
+							</thead>
+							<tr>
+								<td>
+									<a href="form-fields.html">Registration Form</a>
+								</td>
+								<td>
+									<a href="#">
+										<span class="glyphicon glyphicon-remove"></span>
+									</a>
+									<a href="#">
+										<span class="glyphicon glyphicon-pencil"></span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="form-fields.html">Contact List</a>
+								</td>
+								<td>
+									<a href="#">
+										<span class="glyphicon glyphicon-remove"></span>
+									</a>
+									<a href="#">
+										<span class="glyphicon glyphicon-pencil"></span>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="form-fields.html">To Do List</a>
+								</td>
+								<td>
+									<a href="#">
+										<span class="glyphicon glyphicon-remove"></span>
+									</a>
+									<a href="#">
+										<span class="glyphicon glyphicon-pencil"></span>
+									</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="../../dist/js/bootstrap.min.js"></script>
+	    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	    <script src="../../assets/js/vendor/holder.min.js"></script>
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>

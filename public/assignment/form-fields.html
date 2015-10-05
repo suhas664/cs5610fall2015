@@ -1,1 +1,180 @@
 <!-- Form fields page -->
+<!-- Bootstrap example page has been refered to and edited -->
+<!-- Reference source = http://getbootstrap.com/examples/dashboard/ -->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="Form Fields page for the assignment">
+    	<meta name="author" content="Suhas Venkatesha Murthy">
+		<title>Fields</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link href = "css/style.css" rel = "stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		    <div class="container-fluid">
+		        <div class="navbar-header">
+		          	<a class="navbar-brand" href="home.html">Form Maker</a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          	<ul class="nav navbar-nav navbar-right">
+		              	<li><a href="register.html">Register</a></li>
+		              	<li><a href="login.html">Login</a></li> 
+		          	</ul>
+		        </div>
+		    </div>
+		</nav>
+		<div class="container-fluid">
+      		<div class="row">
+        		<div class="col-sm-3 col-md-2 sidebar">
+          			<ul class="nav nav-sidebar">
+              			<li><a href="home.html"> Home <span class="sr-only">(current)</span></a></li>
+              			<li><a href="profile.html">Profile</a></li>
+              			<li><a href="admin.html">Admin</a></li>
+              			<li class="active"><a href="forms.html">Forms</a></li>
+          			</ul>
+        		</div>
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<h1 class="page-header">Fields</h1>
+						<ul class="nav nav-tabs">
+							<li role="presentation"><a href="forms.html">Forms</a></li>
+							<li class="active" role="presentation"><a href="#">Fields</a></li>
+						</ul>
+						<form>
+							<div class="form-group">
+								<label for="First_Name">First Name:</label>
+								<div class="input-group">
+									<input type="text" class="form-control" name="First_Name" placeholder="First Name">
+									<span class="input-group-btn">
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-edit"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-copy"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-sort"></span></button></a>
+									</span>	
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="Last_Name">Last Name:</label>
+								<div class="input-group">
+									<input type="text" class="form-control" name="Last_Name" placeholder="Last Name">
+									<span class="input-group-btn">
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-edit"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-copy"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-sort"></span></button></a>
+									</span>	
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="DOB">Date of Birth:</label>
+								<div class="input-group">
+									<input type="date" class="form-control" name="DOB">
+									<span class="input-group-btn">
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-edit"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-copy"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-sort"></span></button></a>
+									</span>	
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="Gender">Gender</label>
+								<div class="input-group">
+									<select class="form-control">
+										<option value="" disabled selected>Select your option</option>					
+										<option>Male</option>
+										<option>Female</option>					
+									</select>
+									<span class="input-group-btn">
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-edit"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-copy"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-remove"></span></button></a>
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-sort"></span></button></a>
+									</span>	
+								</div>
+							</div>
+							
+							<div class="form-group">
+								<label for="Roles">Roles</label>
+								<div class="input-group">
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" value="Admin">
+											Admin
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" value="Student">
+											Student
+										</label>
+									</div>
+									<div class="checkbox">
+										<label>
+											<input type="checkbox" value="User">
+											User
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="licence">Licence Agreement</label>
+								<div class="input-group">
+									
+									<div class="radio">
+										<label>
+											<input type="radio" name="licence" id="Agree" value="Agree" checked>
+											Yes
+										</label>
+									</div>
+									<div class="radio">
+										<label>
+											<input type="radio" name="licence" id="Disagree" value="Disagree">
+											No
+										</label>
+									</div>
+								</div>
+							</div>
+							<hr>
+							<div class="form-group">
+								<label for="Add-new">Add New Field</label>
+								<div class="input-group">
+									<select class="form-control">					
+										<option>Single Line Text</option>
+										<option>Date</option>
+										<option>Dropdown</option>
+										<option>Checkboxes</option>
+										<option>Radio Buttons</option>
+										<option>Paragraph Text Fields</option>					
+									</select>
+									<span class="input-group-btn">
+										<a href="#"><button class="btn btn-default" type="button"><span class="glyphicon glyphicon-copy"></span></button></a>
+									</span>	
+								</div>
+							</div>
+						</form>
+				</div>
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="../../dist/js/bootstrap.min.js"></script>
+	    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	    <script src="../../assets/js/vendor/holder.min.js"></script>
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+		</body>
+</html>

@@ -1,11 +1,70 @@
 <!-- Home page -->
+<!-- Bootstrap example page has been refered to and edited -->
+<!-- Reference source = http://getbootstrap.com/examples/dashboard/ -->
 <!DOCTYPE HTML>
 <html>
 	<head>
+
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="Home page for the assignment">
+    	<meta name="author" content="Suhas Venkatesha Murthy">
+
 		<title>Welcome !</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link href = "css/style.css" rel = "stylesheet">
+		
 	</head>
 	<body>
-		<h1>Welcome !</h1>
-		<p>Lorem ipsum paragraph
+		
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		    <div class="container-fluid">
+		        <div class="navbar-header">
+		          	<a class="navbar-brand" href="home.html">Form Maker</a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          	<ul class="nav navbar-nav navbar-right">
+		              	<li><a href="register.html">Register</a></li>
+		              	<li><a href="login.html">Login</a></li> 
+		          	</ul>
+		        </div>
+		    </div>
+		</nav>
+
+		<div class="container-fluid">
+      		<div class="row">
+        		<div class="col-sm-3 col-md-2 sidebar">
+          			<ul class="nav nav-sidebar">
+              			<li class="active"><a href="home.html"> Home <span class="sr-only">(current)</span></a></li>
+              			<li><a href="profile.html">Profile</a></li>
+              			<li><a href="admin.html">Admin</a></li>
+              			<li><a href="forms.html">Forms</a></li>
+          			</ul>
+        		</div>
+
+				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+					<h1 class="page-header">Welcome !</h1>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ipsum augue, molestie vitae arcu at, iaculis consequat ante. Nullam ornare rutrum augue non condimentum. Aliquam id tempor lacus, ut ultricies libero. Morbi laoreet feugiat lorem sed ullamcorper. Nulla odio neque, imperdiet a euismod non, fringilla nec quam. Mauris quis justo a augue tincidunt porttitor in sit amet lectus. Aliquam justo dolor, laoreet id nibh in, venenatis euismod orci. Praesent lorem ligula, varius at risus quis, accumsan hendrerit justo. Sed ut sagittis tortor.</p>
+				</div>
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="../../dist/js/bootstrap.min.js"></script>
+	    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	    <script src="../../assets/js/vendor/holder.min.js"></script>
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 	</body>
 </html>
