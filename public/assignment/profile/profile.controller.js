@@ -8,10 +8,9 @@
 
 	function ProfileController($rootScope, $scope, $location, UserService) {
 		$scope.$location = $location;
-		$scope.update = update;
 		$scope.user = $rootScope.currentUser;
 		
-		function update() {
+		$scope.update = function() {
 			UserService.updateUser($scope.user.id, $scope.user, function(updated_user){
 			});
 		}
