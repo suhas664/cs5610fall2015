@@ -47,10 +47,9 @@
 		function updateFormById(form_id, new_form, callback) {
 			forms.forEach(function (ele, index) {
 				if (ele.id === form_id) {
-					new_form.id = ele.id;
-					new_form.user_id = ele.user_id;
-					forms.splice(index, 1);
-					forms.push(new_form);
+					for(var property in new_form){
+						ele[property] = new_form[property];
+					}
 					callback(ele);
 				}
 			})
