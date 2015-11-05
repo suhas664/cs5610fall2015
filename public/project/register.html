@@ -1,0 +1,89 @@
+<!-- Register page -->
+<!-- Bootstrap example page has been refered to and edited -->
+<!-- Reference source = http://getbootstrap.com/examples/dashboard/ -->
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="Register page for the assignment">
+    	<meta name="author" content="Suhas Venkatesha Murthy">
+
+		<title>Register</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<link href = "css/style.css" rel = "stylesheet">
+		
+	</head>
+	<body>
+		<!-- Username text field with the label and placeholder text -->
+		<!-- Password text field with the label and placeholder text -->
+		<!-- Verify Password text field with the label and placeholder text -->
+		<!-- Email text field with the label and placeholder text -->
+		<!-- Register button that navigates to the Profile page -->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		    <div class="container-fluid">
+		        <div class="navbar-header">
+		          	<a class="navbar-brand" href="home.html">OSProjects</a>
+		        </div>
+		    </div>
+		</nav>
+		<div class="container-fluid">
+      		<div class="row">
+				<div style="float:left; width:50%">
+					<h1 class="page-header" style="margin:20px">Register</h1>
+					<form class="form-horizontal" action="./profile.html">
+						<div class="form-group">
+							<label for="Username" class="col-sm-2 control-label">Username </label>
+							<div class="col-sm-10">
+								<input type="text" name="Username" id="Username" placeholder="Username" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="Password" class="col-sm-2 control-label">Password </label>
+							<div class="col-sm-10">
+								<input type="password" name="pasword" id="Password" placeholder="Password" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="VerifyPassword" class="col-sm-2 control-label">Verify Password </label>
+							<div class="col-sm-10">
+								<input type="password" name="VerifyPasword" id="VerifyPassword" placeholder="Password" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="Email" class="col-sm-2 control-label">Email </label>
+							<div class="col-sm-10">
+								<input type="email" name="Email" id="Email" placeholder="Email" class="form-control">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button type="submit" class="btn btn-default">Register</button>
+							</div>
+						</div>
+					</form>	
+									
+				</div>
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript
+	    ================================================== -->
+	    <!-- Placed at the end of the document so the pages load faster -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="../../dist/js/bootstrap.min.js"></script>
+	    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	    <script src="../../assets/js/vendor/holder.min.js"></script>
+	    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	</body>
+</html>
