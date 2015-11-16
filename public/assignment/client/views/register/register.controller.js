@@ -11,6 +11,7 @@
 		$scope.user = {};
 
 		$scope.register = function() {
+			console.log("Getting register done");
 			UserService.createUser($scope.user, function(new_user){
 				$rootScope.currentUser = new_user;
 				$location.url('/profile');
