@@ -11,7 +11,12 @@
 		$scope.user = $rootScope.currentUser;
 		
 		$scope.update = function() {
-			UserService.updateUser($scope.user.id, $scope.user, function(updated_user){
+			UserService.updateUser($scope.user.id, $scope.user).then (function(user)
+			{
+				for(var i in user)
+				{
+					$scope.user[i] = user[i];
+				}
 			});
 		}
 	}

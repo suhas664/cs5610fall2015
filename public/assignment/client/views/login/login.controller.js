@@ -1,7 +1,6 @@
 "use strict";
 
 (function(){
-
 	angular
 	  .module("FormBuilderApp")
 	  .controller("LoginController", LoginController);
@@ -12,8 +11,7 @@
 		$scope.login = function() {
 			UserService.findUserByUsernameAndPassword(
 				$scope.user.username, 
-				$scope.user.password, 
-				function(user) {
+				$scope.user.password).then(function(user) {
 					$rootScope.currentUser = user;
 					$location.url('/profile');
 				});
