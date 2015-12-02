@@ -18,6 +18,9 @@
 		return formservice;
 
 		function createFormForUser(user_id, form) {
+			//console.log("Post request ");
+			//console.log(user_id);
+			//console.log(form);
 			var deferred = $q.defer();
 			$http.post('/api/assignment/user/'+user_id+'/form', form)
 			    .success(function(response) {
@@ -27,6 +30,7 @@
 		}
 
 		function findAllFormsForUser(user_id) {
+			//console.log(user_id);
 			var deferred = $q.defer();
 			$http.get('/api/assignment/user/'+user_id+'/form')
 			    .success(function(response) {
@@ -36,6 +40,7 @@
 		}
 
 		function deleteFormById(form_id) {
+			//console.log("Form serivice delete");
 			var deferred = $q.defer();
 			$http.delete('/api/assignment/form/'+form_id)
 			    .success(function(response) {
@@ -45,6 +50,8 @@
 		}
 
 		function updateFormById(form_id, new_form) {
+			//console.log(form_id);
+			//console.log(new_form);
 			var deferred = $q.defer();
 			$http.put('/api/assignment/form/'+form_id, new_form)
 			    .success(function(response) {

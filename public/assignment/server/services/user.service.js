@@ -2,7 +2,11 @@
 
 module.exports = function(app, model) {
 	app.post('/api/assignment/user', function(req, res) {
-		res.json(model.Create(req.body));
+		model
+			.Create(req.body)
+			.then(function(user){
+				res.json(user);
+			});
 	});
 
 	app.get('/api/assignment/user', function(req, res) {
@@ -10,29 +14,59 @@ module.exports = function(app, model) {
 		var username = req.param('username');
 		var password = req.param('password');
 
-		if(username == null && password == null) {
-			res.json(model.FindAll());
-			return;
+		if(typeof username == 'undefined' && typeof password == 'undefined') {
+			model
+				.FindAll()
+				.then(function(users){
+					res.json(users)
+				});
 		} 
-		if (password == null) {
-			res.json(model.FindUserByUsername(username));
-			return;
+		
+		else if (username != null && password != null) {
+			var credentials = {
+				username : username,
+				password : password
+			};
+			model
+				.FindUserByCredentials(credentials)
+				.then(function(user){
+					res.json(user);
+				});
 		} 
-		res.json(model.FindUserByCredentials({
-			username: username,
-			password: password
-		}));
+		else{
+			model
+				.FindUserByUsername(username)
+				.then(function(user){
+					res.json(user);
+				});
+		}
 	});
 
 	app.get('/api/assignment/user/:id', function(req, res) {
-		res.json(model.FindById(req.params.id));
+		var id = req.params.id;
+		model
+			.FindById(id)
+			.then(function(user){
+				res.json(user);
+			})
 	});
 
 	app.put('/api/assignment/user/:id', function(req, res) {
-		res.json(model.Update(req.params.id, req.body));
+		var id = req.params.id;
+		//console.log("put api call");
+		model
+			.Update(id, req.body)
+			.then(function(user){
+				res.json(user)
+			})
 	});
 
 	app.delete('/api/assignment/user/:id', function(req, res){
-		res.json(model.Delete(req.params.id));
+		var id = req.params.id;
+		model
+			.Delete(id)
+			.then(function(stat){
+				res.json(stat);
+			})
 	});
 };
