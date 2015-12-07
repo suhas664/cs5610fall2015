@@ -12,8 +12,14 @@
 			UserService.findUserByUsernameAndPassword(
 				$scope.user.username, 
 				$scope.user.password).then(function(user) {
+					if(user != null){
 					$rootScope.currentUser = user;
 					$location.url('/profile');
+					}
+					else{
+						$location.url('/home');
+						alert("Invalid Credentials ! First Time Users Please Sign up !");
+					}
 				});
 		}
 	}
