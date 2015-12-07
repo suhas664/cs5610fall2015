@@ -12,7 +12,7 @@ module.exports = function(db, mongoose) {
 		Create: Create,
 		FindAll: FindAll,
 		FindById: FindById,
-		FindProjectByTitle: FindProjectByTitle,
+		FindProjectsByTitle: FindProjectsByTitle,
 		FindProjectsByOwner: FindProjectsByOwner,
 		Update: Update,
 		Delete: Delete
@@ -55,13 +55,13 @@ module.exports = function(db, mongoose) {
     	return deferred.promise;
 	}
 
-	function FindProjectByTitle(title) {
+	function FindProjectsByTitle(title) {
 		var deferred = q.defer();
-    	ProjectModel.findOne({title : title}, function(error, project) {
+    	ProjectModel.find({title : new RegExp(title, "i")}, function(error, projects) {
      	if (error)
         	deferred.reject(error);
       	else
-        	deferred.resolve(title);
+        	deferred.resolve(projects);
     	});
     	return deferred.promise;
 	}

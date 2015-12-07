@@ -15,6 +15,7 @@
 			createProject : createProject,
 			deleteUserById : deleteUserById,
 			getGitCommits : getGitCommits,
+			findProjectsByTitle : findProjectsByTitle,
 			updateUser : updateUser
 		};
 
@@ -32,6 +33,15 @@
 		function findProjectsById(project_id) {
 			var deferred = $q.defer();
 			$http.get('/api/assignment/project/'+project_id)
+			   .success(function(response) {
+			   	   deferred.resolve(response);
+			   });
+			return deferred.promise;
+		}
+
+		function findProjectsByTitle(title) {
+			var deferred = $q.defer();
+			$http.get('/api/assignment/project/title/'+title)
 			   .success(function(response) {
 			   	   deferred.resolve(response);
 			   });

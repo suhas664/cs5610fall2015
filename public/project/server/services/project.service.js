@@ -40,6 +40,15 @@ module.exports = function(app, model) {
 			})
 	});
 
+	app.get('/api/assignment/project/title/:title', function(req, res) {
+		var title = req.params.title;
+		model
+			.FindProjectsByTitle(title)
+			.then(function(project){
+				res.json(project)
+			})
+	});
+
 	app.delete('/api/assignment/user/:id', function(req, res){
 		var id = req.params.id;
 		model
