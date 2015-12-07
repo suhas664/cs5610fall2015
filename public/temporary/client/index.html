@@ -1,16 +1,17 @@
-<!-- Login page -->
+<!-- Home page -->
 <!-- Bootstrap example page has been refered to and edited -->
 <!-- Reference source = http://getbootstrap.com/examples/dashboard/ -->
+<!DOCTYPE HTML>
 <html>
 	<head>
 
 		<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<meta name="description" content="Login page for the assignment">
+    	<meta name="description" content="Home page for the assignment">
     	<meta name="author" content="Suhas Venkatesha Murthy">
 
-		<title>Login</title>
+		<title>OSProjects</title>
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -24,59 +25,45 @@
 		
 	</head>
 	<body>
-		<!-- Username, Password text fields and login button -->
 		
-		<!-- Username text field with the label and placeholder text -->
-		<!-- Password text field with the label and placeholder text -->
-		<!-- Login button that navigates to the Profile page -->
-		<nav class="navbar navbar-inverse navbar-fixed-top" bgcolor="#99FFCC">
-		    <div class="container-fluid">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+		    <div style="background-color: #0B0B61" class="container-fluid">
 		        <div class="navbar-header">
-		          	<a class="navbar-brand" href="home.html">Form Maker</a>
-		        </div>
-		        <div id="navbar" class="navbar-collapse collapse">
-		          	<ul class="nav navbar-nav navbar-right">
-		              	<li><a href="register.html">Register</a></li>
-		              	<li><a href="login.html">Login</a></li> 
-		          	</ul>
+		          	<a class="navbar-brand" href="index.html">OSProjects</a>
 		        </div>
 		    </div>
 		</nav>
 
-		<div class="container-fluid">
-      		<div class="row">
-        		<div class="col-sm-3 col-md-2 sidebar">
-          			<ul class="nav nav-sidebar">
-              			<li class="active"><a href="home.html"> Home <span class="sr-only">(current)</span></a></li>
-              			<li><a href="profile.html">Profile</a></li>
-              			<li><a href="admin.html">Admin</a></li>
-              			<li><a href="forms.html">Forms</a></li>
-          			</ul>
-        		</div>
-
-				<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-					<h1 class="page-header">Login</h1>
-					<form class="form-horizontal" action="./profile.html">
+		<div class="container-fluid"> 
+			<div style ="float:left; width:50%">
+				<h1 style="color:green" class="page-header">Open Source Projects</h1>
+				<p> The project is aimed at building a website that helps people find other like minded people with the same interests to work on a project. Anyone and everyone can register and either post ideas of projects they want to work on or join projects that have been posted by other people. This service also lists people and projects that are geographically closer.</p> 
+			</div>
+			<div style="float:left; width:10%">
+				<p>
+			</div>
+			<div style="float:left; width:30%">
+				<h2> Login </h2>
+				<form class="form-horizontal" action="./profile.html">
 						<div class="form-group">
-							<label for="Username" class="col-sm-2 control-label">Username </label>
+							<label for="Username" class="col-sm-2 control-label" style="margin:2px">Username </label>
 							<div class="col-sm-10">
 								<input type="text" name="Username" id="Username" placeholder="Username" class="form-control">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="Password" class="col-sm-2 control-label">Password </label>
+							<label for="Password" class="col-sm-2 control-label" style="margin:2px">Password </label>
 							<div class="col-sm-10">
 								<input type="password" name="pasword" id="Password" placeholder="Password" class="form-control">
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-sm-offset-2 col-sm-10">
-								<button type="submit" class="btn btn-default">Login</button>
+								<a type="submit" class="btn btn-default" href = "./profile.html">Login</a>
+								<a type="submit" class="btn btn-default" href = "./register.html">Register</a>
 							</div>
 						</div>
-					</form>	
-									
-				</div>
+				</form>
 			</div>
 		</div>
 		<!-- Bootstrap core JavaScript

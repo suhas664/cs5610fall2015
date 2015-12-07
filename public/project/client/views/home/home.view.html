@@ -1,0 +1,38 @@
+<div class="container" ng-include="'./views/preheader/header.view.html'"></div>
+<div class="container">
+	<div class="col-md-12">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class="row">
+				<h1 style="color:green" class="page-header">Open Source Projects</h1>
+				<p> The project is aimed at building a website that helps people find other like minded people with the same interests to work on a project. Anyone and everyone can register and either post ideas of projects they want to work on or join projects that have been posted by other people. This service also lists people and projects that are geographically closer.</p>
+			</div>
+			<div class="row">
+				<form class="form-horizontal" ng-controller="LoginController">
+					<fieldset>
+						<legend>Login</legend>
+						<div class="form-group">
+							<label for="Username" class="col-sm-2 control-label">Username </label>
+							<div class="col-sm-10">
+								<input type="text" name="Username" id="Username" placeholder="Username" class="form-control" ng-model="user.username">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="Password" class="col-sm-2 control-label">Password </label>
+							<div class="col-sm-10">
+								<input type="password" name="pasword" id="Password" placeholder="Password" class="form-control" ng-model="user.password">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-lg-10 col-lg-offset-2">
+								<a type="submit" class="btn btn-primary" ng-click="login()">Login</a>
+								<a type="submit" class="btn btn-danger" href = "#/register">Signup</a>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	<div class="col-md-2"></div>
+</div>
+</div>

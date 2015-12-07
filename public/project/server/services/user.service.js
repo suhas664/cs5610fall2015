@@ -53,7 +53,6 @@ module.exports = function(app, model) {
 
 	app.put('/api/assignment/user/:id', function(req, res) {
 		var id = req.params.id;
-		console.log("put api call -- wrong place");
 		model
 			.Update(id, req.body)
 			.then(function(user){

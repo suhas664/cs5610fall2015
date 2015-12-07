@@ -1,0 +1,57 @@
+<!-- Index page -->
+<!-- Bootstrap example page has been refered to and edited -->
+<!-- Reference source = http://getbootstrap.com/examples/dashboard/ -->
+<!DOCTYPE HTML>
+<html ng-app="FormBuilderApp">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Index page for the assignment">
+		<meta name="author" content="Suhas Venkatesha Murthy">
+
+		<title>Welcome !</title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled and minified CSS -->
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
+
+		<!--Angular CDN-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.js"></script>
+
+		<!-- .js scripts -->
+		<script src="app.js"></script>
+		<script src="config.js"></script>
+		<script src="./views/preheader/header.controller.js"></script>
+		<script src="./views/postheader/header.controller.js"></script>
+		<script src="./views/sidebar/sidebar.controller.js"></script>
+		<script src="./service/UserService.js"></script>
+		<script src="./service/ProjectService.js"></script>
+		<script src="./service/FieldService.js"></script>
+		<script src="./service/FormService.js"></script>
+		<script src="./views/login/login.controller.js"></script>
+		<script src="./views/propose/propose.controller.js"></script>
+		<script src="./views/register/register.controller.js"></script>
+		<script src="./views/profile/profile.controller.js"></script>
+		<script src="./views/form/form.controller.js"></script>
+		<script src="./views/field/field.controller.js"></script>
+
+		<link rel="stylesheet" href="css/bootstrap.css" media="screen">
+		<link href = "css/style.css" rel = "stylesheet">
+
+	</head>
+	<body>
+				<div ng-view>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

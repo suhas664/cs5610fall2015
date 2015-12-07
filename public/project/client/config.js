@@ -1,0 +1,36 @@
+"use strict";
+
+(function(){
+	angular
+		.module("FormBuilderApp")
+		.config(function($routeProvider) {
+			$routeProvider
+				.when("/home", {
+					templateUrl: "./views/home/home.view.html"
+				})
+				.when("/propose", {
+					templateUrl: "./views/propose/propose.view.html",
+					controller: "ProposeController"
+				})
+				.when("/register", {
+					templateUrl: "./views/register/register.view.html",
+					controller: "RegisterController"
+				})
+				.when("/profile", {
+					templateUrl: "./views/profile/profile.view.html",
+					controller: "ProfileController"
+				})
+				.when("/form", {
+					templateUrl: "./views/form/form.view.html",
+					controller: "FormController"
+				})
+				.when("/user/:userId/form/:formId/fields", {
+					templateUrl: "./views/field/field.view.html",
+					controller: "FieldController",
+					controllerAs: "model"
+				})
+				.otherwise({
+					redirectTo: "/home"
+				});
+	  	});
+})();
