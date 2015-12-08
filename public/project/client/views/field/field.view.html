@@ -1,10 +1,10 @@
 <div class="container" ng-include="'./views/postheader/header.view.html'"></div>
 
 <div class="container-fluid">
-        <div class="row">
-        <div class="container" ng-include="'./views/sidebar/sidebar.view.html'"></div>
-            <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main" ng-controller="FieldController">
-
+    <div class="container">
+        <div class="row col-md-12">
+            <div class="col-md-2" ng-include="'./views/sidebar/sidebar.view.html'"></div>
+            <div class="col-md-10" ng-controller="FieldController">
                 <h1 class="page-header">{{project.title}}</h1>
                 <div class="panel panel-danger">
                   <div class="panel-heading">
@@ -51,8 +51,8 @@
                             </td>
                         </tr>
                     </table>
+                </div> 
+            </div>
         </div>
-        
     </div>
-</div>
 </div>

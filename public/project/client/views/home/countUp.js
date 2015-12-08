@@ -128,3 +128,5 @@
     });
   };
 }));
+
+//reference -- google search result : count up javascript
