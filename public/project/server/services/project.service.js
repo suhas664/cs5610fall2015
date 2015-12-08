@@ -2,7 +2,6 @@
 
 module.exports = function(app, model) {
 	app.post('/api/assignment/project', function(req, res) {
-		console.log("got the create project request");
 		model
 			.Create(req.body)
 			.then(function(user){

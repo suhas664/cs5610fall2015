@@ -1,13 +1,31 @@
 <div class="container" ng-include="'./views/preheader/header.view.html'"></div>
 <div class="container">
-	<div class="col-md-12">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
-			<div class="row">
+	<div class="col-md-12" style="width: 100%; height: 550px; position: absolute; top: 0; left: 0; background-image: url('//www.topcoder-dev.com/wp-content/uploads/2015/10/header-image1.jpg'); background-repeat: no-repeat; background-position: center center; background-size: cover; border-bottom: 12px #F4F4f4 solid;">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="row" style ="padding-top: 50px">
 				<h1 style="color:green" class="page-header">Open Source Projects</h1>
 				<p> The project is aimed at building a website that helps people find other like minded people with the same interests to work on a project. Anyone and everyone can register and either post ideas of projects they want to work on or join projects that have been posted by other people. This service also lists people and projects that are geographically closer.</p>
 			</div>
-			<div class="row" ng-controller="LoginController">
+			<div class="row" style ="padding-top: 15px">
+				<div class="active-user col-md-6">
+					<label>Active users : </label>
+					<span class="timer" data-from="0" data-to="752304" data-speed="3000" data-refresh-interval="50"></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="active-user col-md-6">
+					<label>Active Projects: </label>
+					<span class="timer" data-from="0" data-to="36500" data-speed="3000" data-refresh-interval="50"></span>
+				</div>
+			</div>
+			<script type="text/javascript">
+			  $('.timer').countTo();
+			</script>
+			<p class="disclaimer">
+				* Those are not the numbers we are at right now, BUT WE WOULD DEFINITELY LIKE TO GET THERE
+			</p>
+			<div class="row" ng-controller="LoginController" style ="padding-top: 30px">
 				<form class="form-horizontal">
 					<fieldset>
 						<legend>Login</legend>
@@ -33,6 +51,12 @@
 				</form>
 			</div>
 		</div>
-	<div class="col-md-2"></div>
+	<div class="col-md-3"></div>
 </div>
 </div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">Place sticky footer content here.</p>
+  </div>
+</footer>
