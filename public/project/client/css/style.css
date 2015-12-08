@@ -7,6 +7,10 @@ body {
   padding-top: 50px;
 }
 
+.navbar-fixed-bottom{
+  border-width: 0;
+}
+
 @media (max-width: 768px){
   .container-fluid > .navbar-collapse{
     margin-left: 0;
