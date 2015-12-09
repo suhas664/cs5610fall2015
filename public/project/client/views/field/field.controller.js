@@ -5,7 +5,7 @@
     .module("FormBuilderApp")
     .controller("FieldController", FieldController);
     
-  function FieldController($scope, $routeParams, ProjectService) {
+  function FieldController($rootScope, $scope, $routeParams, ProjectService) {
   
     var userId = $routeParams.userId;
     var formId = $routeParams.formId;
@@ -20,5 +20,20 @@
         });
       });
     }
+
+    $scope.addUser = function(index) {
+      var username = $rootScope.currentUser.username;
+      ProjectService.addUserToProject(formId, username).then(function(details) {
+        $scope.project = details;
+      });
+    }
+
+    $scope.deleteUser = function(index) {
+      var username = $rootScope.currentUser.username;
+      ProjectService.deleteUserToProject(formId, username).then(function(details) {
+        $scope.project = details;
+      });
+    }
+
   }
 })();

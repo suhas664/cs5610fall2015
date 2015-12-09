@@ -13,9 +13,11 @@
 			findAllProjects : findAllProjects,
 			findProjectsById : findProjectsById,
 			createProject : createProject,
-			deleteUserById : deleteUserById,
+			deleteProjectById : deleteProjectById,
 			getGitCommits : getGitCommits,
 			findProjectsByTitle : findProjectsByTitle,
+			addUserToProject : addUserToProject,
+			deleteUserToProject : deleteUserToProject,
 			updateUser : updateUser
 		};
 
@@ -24,6 +26,24 @@
 		function findProjectsByOwner(user_gitid) {
 			var deferred = $q.defer();
 			$http.get('/api/assignment/project/user/'+user_gitid)
+			   .success(function(response) {
+			   	   deferred.resolve(response);
+			   });
+			return deferred.promise;
+		}
+
+		function addUserToProject(project_id, name) {
+			var deferred = $q.defer();
+			$http.post('/api/assignment/project/'+project_id+'/user/'+name)
+			   .success(function(response) {
+			   	   deferred.resolve(response);
+			   });
+			return deferred.promise;
+		}
+
+		function deleteUserToProject(project_id, name) {
+			var deferred = $q.defer();
+			$http.post('/api/assignment/project/'+project_id+'/user/'+name+'/delete')
 			   .success(function(response) {
 			   	   deferred.resolve(response);
 			   });
@@ -75,9 +95,9 @@
 			return deferred.promise;
 		}
 
-		function deleteUserById(user_id) {
+		function deleteProjectById(project_id) {
 			var deferred = $q.defer();
-			$http.delete('/api/assignment/user/'+user_id)
+			$http.delete('/api/assignment/project/'+project_id)
 			    .success(function(response) {
 			    	deferred.resolve(response);
 			    });

@@ -15,6 +15,8 @@ module.exports = function(db, mongoose) {
 		FindProjectsByTitle: FindProjectsByTitle,
 		FindProjectsByOwner: FindProjectsByOwner,
 		Update: Update,
+        AddUser : AddUser,
+        DeleteUser : DeleteUser,
 		Delete: Delete
 	};
 
@@ -98,7 +100,7 @@ module.exports = function(db, mongoose) {
 
 	function Delete(id) {
 	var deferred = q.defer();
-    UserModel.remove({id: id}, function(error){
+    ProjectModel.remove({id: id}, function(error){
     if(error){
     	deferred.reject(error);
     } 
@@ -111,4 +113,52 @@ module.exports = function(db, mongoose) {
     	});
     	return deferred.promise;
 	}
+
+    function AddUser(project_id, user_name) {
+        var deferred = q.defer();
+        ProjectModel.findOne({id : project_id}, function(error, project) {
+            if(error) 
+                deferred.reject(error);
+            else {
+                var projectUsers = project.users;
+                if(projectUsers.indexOf(user_name) == -1){
+                    projectUsers.push(user_name);
+                }
+                project.users = projectUsers;
+                project.save(function(error, document) {
+                    if(error) {
+                        deferred.reject(error);
+                    } else {
+                        deferred.resolve(document);
+                    }
+                });
+            }
+        });
+        return deferred.promise;
+    }
+
+    function DeleteUser(project_id, user_name) {
+        var deferred = q.defer();
+        ProjectModel.findOne({id : project_id}, function(error, project) {
+            if(error) 
+                deferred.reject(error);
+            else {
+                var projectUsers = project.users;
+                if(projectUsers.indexOf(user_name) > -1){
+                    var index = projectUsers.indexOf(user_name);
+                    projectUsers.splice(index, 1);
+                }
+                project.users = projectUsers;
+                project.save(function(error, document) {
+                    if(error) {
+                        deferred.reject(error);
+                    } else {
+                        deferred.resolve(document);
+                    }
+                });
+            }
+        });
+        return deferred.promise;
+    }
+
 };

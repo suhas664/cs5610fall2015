@@ -48,7 +48,27 @@ module.exports = function(app, model) {
 			})
 	});
 
-	app.delete('/api/assignment/user/:id', function(req, res){
+	app.post('/api/assignment/project/:projectid/user/:user', function(req, res) {
+		var project_id = req.params.projectid;
+		var user =  req.params.user
+		model
+            .AddUser(project_id, user)
+            .then(function(uform) {
+                res.json(uform);
+            });
+	});
+
+	app.post('/api/assignment/project/:projectid/user/:user/delete', function(req, res) {
+		var project_id = req.params.projectid;
+		var user =  req.params.user
+		model
+            .DeleteUser(project_id, user)
+            .then(function(uform) {
+                res.json(uform);
+            });
+	});
+
+	app.delete('/api/assignment/project/:id', function(req, res){
 		var id = req.params.id;
 		model
 			.Delete(id)

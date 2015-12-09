@@ -12,8 +12,6 @@
 
 		$scope.propose = function() {
 			$scope.project.owner = $rootScope.currentUser.gitusername;
-			console.log("Getting propose project done");
-			console.log($scope.project);
 			ProjectService.createProject($scope.project).then(function(new_project){
 				$location.url('/form');
 			});

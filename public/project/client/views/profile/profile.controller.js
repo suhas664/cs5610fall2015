@@ -31,5 +31,11 @@
 			//console.log(url);
 			$location.path(url);
 		}
+
+		$scope.deleteForm = function(index) {
+			ProjectService.deleteProjectById($scope.projects[index]._id).then(function(projects){
+				$scope.projects.splice(index, 1);
+			});
+		}
 	}
 })();

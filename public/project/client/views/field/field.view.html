@@ -29,7 +29,19 @@
                   <div class="panel-body">
                     {{project.owner}}
                   </div>
-                </div> 
+                </div>
+                <div class="panel panel-info">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Active Users</h3>
+                  </div>
+                  <div class="panel-body"> 
+                    <div ng-repeat="name in project.users">
+                      {{name}} 
+                    </div>
+                  </div>
+                </div>
+                <a class="btn btn-primary" ng-click="addUser()">Join Project</a>
+                <a class="btn btn-danger" ng-click="deleteUser()">Leave Project</a>
                 <br>
                 <h3>Git Commit History for the Repository</h3>
                 <div class="table-responsive">
